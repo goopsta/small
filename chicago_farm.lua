@@ -1,5 +1,4 @@
 -- this shit aint mine i just wanted to add a logger so i can see what it was doing
-repeat game:IsLoaded() until game:IsLoaded() == true
 rconsoleprint("@@LIGHT_BLUE@@")
 rconsoleprint([[
 
@@ -126,13 +125,11 @@ if alarm.Sound.IsPlaying then --Checks if the jewelry store is currently being r
     elseif game:IsLoaded() and character then end --If the player is already in the game then continue
 
     tweenService:Create(rootPart, tweenInfo, {CFrame = dealer.HumanoidRootPart.CFrame}):Play() --Teleport to the dealer
-    rconslewarn("tping to dealer")
     task.wait(1)
     fireproximityprompt(dealer.HumanoidRootPart.PromptAttachment.ProximityPrompt) --Opens the shop gui
-    rconslewarn("opening shop ui")
     task.wait(0.1)
     purchase:InvokeServer("bank_dealer", "Duffel Bag")
-    rconslewarn("buying duffel")
+    rconslewarn("bought duffel")
     
     local function sellJewels()
         tweenService:Create(rootPart, tweenInfo, {CFrame = sellingPoint.PrimaryPart.CFrame}):Play() --Teleport to selling point
