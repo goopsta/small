@@ -60,7 +60,7 @@ player.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
         queueonteleport([[
             repeat task.wait() until game.Players.LocalPlayer and game.Players.LocalPlayer.PlayerGui:WaitForChild("Intro")
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/jasonsworks/cr-autofarm/master/main.lua'))()
+            loadstring(game:HttpGet('https://github.com/goopsta/small/blob/main/chicago_farm.lua'))()
         ]])
     end
  end)
