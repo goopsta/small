@@ -1,4 +1,5 @@
 -- this shit aint mine i just wanted to add a logger so i can see what it was doing
+repeat game:IsLoaded() until game:IsLoaded() == true
 rconsoleprint("@@LIGHT_BLUE@@")
 rconsoleprint([[
 
@@ -60,7 +61,7 @@ player.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
         queueonteleport([[
             repeat task.wait() until game.Players.LocalPlayer and game.Players.LocalPlayer.PlayerGui:WaitForChild("Intro")
-            loadstring(game:HttpGet('https://github.com/goopsta/small/blob/main/chicago_farm.lua'))()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/goopsta/small/main/chicago_farm.lua'))()
         ]])
     end
  end)
