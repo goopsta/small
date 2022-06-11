@@ -129,14 +129,11 @@ if alarm.Sound.IsPlaying then --Checks if the jewelry store is currently being r
     fireproximityprompt(dealer.HumanoidRootPart.PromptAttachment.ProximityPrompt) --Opens the shop gui
     task.wait(0.1)
     purchase:InvokeServer("bank_dealer", "Duffel Bag")
-    rconslewarn("bought duffel")
     
     local function sellJewels()
         tweenService:Create(rootPart, tweenInfo, {CFrame = sellingPoint.PrimaryPart.CFrame}):Play() --Teleport to selling point
         task.wait(1)
-        rconslewarn("selling Jewelxxet.....")
         fireclickdetector(sellingPoint.ClickDetector)
-        rconslewarn("sold jewels")
         serverHop()
     end
 
